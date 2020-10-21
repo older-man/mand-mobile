@@ -18,12 +18,14 @@
       cancelText="取消"
       large-radius
       @confirm="onSelectorConfirm"
+      @choose="onChoose"
       multi
     ></md-selector>
   </div>
 </template>
 
-<script>import {Selector, Field, FieldItem} from 'mand-mobile'
+<script>
+import {Selector, Field, FieldItem} from 'mand-mobile'
 
 export default {
   name: 'selector-demo',
@@ -70,6 +72,10 @@ export default {
     onSelectorConfirm(array) {
       this.selectorValue = array
     },
+    onChoose(value){
+      console.log(value)
+    }
   },
 }
-</script>
+
+</script>
